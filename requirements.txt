@@ -1,0 +1,5 @@
+autogen-core
+autogen-ext[openai]
+autogen_agentchat
+dotenv
+"autogen-agentchat" "autogen-ext[openai]"
