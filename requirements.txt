@@ -2,5 +2,5 @@ autogen-core
 autogen-ext[openai]
 autogen_agentchat
 dotenv
-ipython
-"autogen-ext[docker]"
+flask
+gunicorn
