@@ -3,3 +3,4 @@ autogen-ext[openai]
 autogen_agentchat
 dotenv
 flask
+gunicorn
