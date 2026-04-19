@@ -11,6 +11,7 @@ import os
 from autogen_agentchat.ui import Console
 from autogen_agentchat.conditions import TextMentionTermination
 from autogen_agentchat.teams import RoundRobinGroupChat
+from autogen_agentchat.base import TaskResult
 
 
 
@@ -91,7 +92,12 @@ async def main():
     try:
         task = "Write a python code to add two numbers"
         async for message in team.run_stream(task=task):
+            if isinstance(message, TextMessage):
+                print(message.source, ":", message.content)
+            elif isinstance(message,TaskResult):
+                print('STOP Reason', message.stop_reason)
             print('=='* 20)
+            print(type(message))
             print(message.source, ":", message)
             print('=='* 20)
  
