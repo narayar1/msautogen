@@ -4,3 +4,4 @@ autogen_agentchat
 dotenv
 flask
 gunicorn
+agentstudio
